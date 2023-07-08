@@ -1,0 +1,25 @@
+def calculate_average(numbers):
+    total = sum(numbers)
+    average = total / len(numbers)
+    return average
+
+def find_maximum(numbers):
+    maximum = max(numbers)
+    return maximum
+
+# Запрашиваем у пользователя список чисел через запятую
+input_numbers = input("Введите список чисел через запятую: ")
+
+# Разделяем строку на отдельные числа
+numbers_list = input_numbers.split(",")
+
+# Преобразуем каждое число в целочисленный формат
+numbers = [int(number) for number in numbers_list]
+
+# Вызываем функцию calculate_average и выводим среднее значение
+average_value = calculate_average(numbers)
+print("Среднее значение:", average_value)
+
+# Вызываем функцию find_maximum и выводим максимальное значение
+maximum_value = find_maximum(numbers)
+print("Максимальное значение:", maximum_value)
